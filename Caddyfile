@@ -3,8 +3,6 @@
 }
 
 
-:{$PORT} {
-    handle_path /api/v1/ {
-        reverse_proxy firebase-database-production.up.railway.app
-    }
+https://caddy-production-9488.up.railway.app {
+  reverse_proxy /api/v1/* https://firebase-database-production.up.railway.app
 }
