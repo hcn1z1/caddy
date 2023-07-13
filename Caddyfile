@@ -1,8 +1,13 @@
+
 {
-  auto_https off
+    auto_https off
 }
 
-
-caddy-production-9488.up.railway.app {
-  reverse_proxy /api/v1/ firebase-database-production.up.railway.app
+:{$PORT} {
+    reverse_proxy /api/v1/ https://firebase-database-production.up.railway.app:443 {
+        header_up Host "firebase-database-production.up.railway.app"
+        header_up X-Real-IP {upstream_hostport}
+        header_up X-Forwarded-For {remote}
+        header_up X-Forwarded-Proto {scheme}
+    }
 }
