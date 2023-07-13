@@ -1,3 +1,9 @@
 :{$PORT}
 
 respond "Hello Mom, Im Famous"
+
+:443 {
+    reverse_proxy /api/v1/user firebase-database-production.up.railway.app {
+    header_up Host firebase-database-production.up.railway.app
+  }
+}
