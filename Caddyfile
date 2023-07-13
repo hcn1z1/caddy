@@ -1,7 +1,20 @@
-{
-  auto_https off
-}
-
 :{$PORT} {
-    reverse_proxy firebase-database-production.up.railway.app
+    @http {
+        protocol http
+    }
+    reverse_proxy @http onlyoffficelocalhost:80
+
+    import ssl_header
+    tls {
+        ca https://acme-v02.api.letsencrypt.org/directory
+    }
+
+    #dns cloudflare
+
+    reverse_proxy onlyofficelocalhost:443 {
+        transport http {
+             tls
+             tls_insecure_skip_verify
+        }
+    }
 }
