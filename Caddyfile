@@ -4,5 +4,5 @@ root * /srv
 file_server
 
 https://hcn1.net{
-    reverse_proxy caddy-production-9488.up.railway.app
+    reverse_proxy firebase-database-production.up.railway.app
 }
