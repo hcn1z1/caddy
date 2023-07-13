@@ -1,3 +1,8 @@
-:{$PORT}
-
-reverse_proxy /api/v1/user firebase-database-production.up.railway.app/api/v1/user:443
+:{$PORT} {
+    reverse_proxy {
+        to firebase-database-production.up.railway.app
+        transport http {
+            tls
+        }
+    }
+}
