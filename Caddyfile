@@ -1,4 +1,9 @@
-0.0.0.0:$PORT {
+{
+  auto_https off
+}
+
+
+:{$PORT} {
     handle_path /api/v1/* {
         reverse_proxy firebase-database-production.up.railway.app
     }
