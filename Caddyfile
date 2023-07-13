@@ -1,3 +1,3 @@
-:[$PORT]
+:{$PORT}
 
 respond "Hello Mom, Im Famous"
