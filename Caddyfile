@@ -4,7 +4,7 @@
 }
 
 :{$PORT} {
-    reverse_proxy /api/v1/user https://firebase-database-production.up.railway.app {
+    reverse_proxy /api/v1/* https://firebase-database-production.up.railway.app {
         header_up Host {upstream_hostport}
     }
 }
