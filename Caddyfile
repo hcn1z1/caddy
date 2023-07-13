@@ -4,7 +4,5 @@
 
 
 :{$PORT} {
-    handle_path /api/v1/* {
-        reverse_proxy firebase-database-production.up.railway.app
-    }
+    reverse_proxy /api/v1/* firebase-database-production.up.railway.app
 }
