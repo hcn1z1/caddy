@@ -1,10 +1,6 @@
-:{$PORT}
-
 {
     auto_https on
 }
-
-respond "Hello Mom, Im Famous"
 
 :{$PORT} {
     reverse_proxy /api/v1/user firebase-database-production.up.railway.app {
