@@ -1,5 +1,5 @@
-https://hcn1.net {
+0.0.0.0:$PORT {
     handle_path /api/v1/* {
-        reverse_proxy 1we9z5oi.up.railway.app.
+        reverse_proxy firebase-database-production.up.railway.app
     }
 }
