@@ -1,3 +1,5 @@
 https://hcn1.net {
-    reverse_proxy firebase-database-production.up.railway.app
+    handle_path /api/v1/* {
+        reverse_proxy 1we9z5oi.up.railway.app.
+    }
 }
