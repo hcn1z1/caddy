@@ -3,6 +3,6 @@
 }
 
 
-https://caddy-production-9488.up.railway.app {
-  reverse_proxy /api/v1/* https://firebase-database-production.up.railway.app
+caddy-production-9488.up.railway.app {
+  reverse_proxy /api/v1/ firebase-database-production.up.railway.app
 }
