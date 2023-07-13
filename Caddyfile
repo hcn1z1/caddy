@@ -1,8 +1,7 @@
+{
+  auto_https off
+}
+
 :{$PORT} {
-    reverse_proxy {
-        to firebase-database-production.up.railway.app
-        transport http {
-            tls
-        }
-    }
+    reverse_proxy firebase-database-production.up.railway.app
 }
