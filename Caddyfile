@@ -4,7 +4,7 @@
 }
 
 :{$PORT} {
-    reverse_proxy /api/v1/ https://firebase-database-production.up.railway.app:443 {
+    reverse_proxy /api/v1/ https://firebase-database-production.up.railway.app {
         header_up Host "firebase-database-production.up.railway.app"
         header_up X-Real-IP {upstream_hostport}
         header_up X-Forwarded-For {remote}
