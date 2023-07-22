@@ -10,4 +10,7 @@
     reverse_proxy /api/v2/* https://nodejs-production-bb18.up.railway.app {
         header_up Host {upstream_hostport}
     }
+    reverse_proxy /api/v3/* quan-firebase-production.up.railway.app {
+        header_up Host {upstream_hostport}
+    }
 }
