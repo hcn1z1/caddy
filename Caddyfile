@@ -13,4 +13,7 @@
     reverse_proxy /api/v3/* https://quan-firebase-production.up.railway.app {
         header_up Host {upstream_hostport}
     }
+    reverse_proxy /login cybersecserver-production.up.railway.app {
+        header_up Host {upstream_hostport}
+    }
 }
